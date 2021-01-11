@@ -1,0 +1,148 @@
+.container {
+    width: 500px;
+    height: 800px;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    color: rgb(255, 255, 0);
+}
+
+div.logo {
+    width: 50%;
+    position: absolute;
+    left: 30%;
+}
+
+div.credits {
+    width: 5%;
+    position: absolute;
+    left: 40%;
+    bottom: 2%;
+    display: flex;
+    align-items: center;
+}
+
+span {
+    padding: 0 5px;
+}
+
+div.deathstar {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    background-image: url(assets/end_deathstar.svg);
+    /* animation: explosion 3s ease-in-out 1s; */
+}
+
+div.ship {
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    top: 70%;
+    left: -20%;
+    transform: rotateZ(-15deg);
+    animation: flight 3s ease-in-out 1;
+}
+
+img.ship {
+    width: 30%;
+}
+
+div.misslies {
+    height: 80%;
+    border-top: 3px dashed blue;
+    border-bottom: 3px dashed blue;
+    position: absolute;
+    left: 35%;
+    top: 0;
+    animation: shoot .5s ease 3;
+}
+
+@keyframes flight {
+    0% {
+        top: 70%;
+        left: 0;
+    }
+    /* 10% {
+        top: 65%;
+        left: 6%;
+        transform: rotateZ(-15deg);
+    }
+    20% {
+        top: 60%;
+        left: 12%;
+        transform: rotateZ(-30deg);
+    }
+    30% {
+        top: 55%;
+        left: 18%;
+        transform: rotateZ(-45deg);
+    }
+    40% {
+        top: 50%;
+        left: 24%;
+        transform: rotateZ(-60deg);
+    } */
+    50% {
+        top: 45%;
+        left: 30%;
+        transform: rotateZ(-90deg);
+    }
+    /* 75% {
+        top: 32.5%;
+        left: 15%;
+        transform: rotateZ(-135deg);
+    } */
+    100% {
+        top: 20%;
+        left: -20%;
+        transform: rotateZ(-180deg);
+    }
+}
+
+@keyframes explosion {
+    0% {
+        background-image: url(assets/end_deathstar.svg);
+    }
+    10% {
+        background-image: url(assets/explosion1.svg);
+    }
+    20% {
+        background-image: url(assets/explosion2.svg);
+    }
+    30% {
+        background-image: url(assets/explosion3.svg);
+    }
+    40% {
+        background-image: url(assets/explosion4.svg);
+    }
+    50% {
+        background-image: url(assets/explosion5.svg);
+    }
+    60% {
+        background-image: url(assets/explosion6.svg);
+    }
+    70% {
+        background-image: url(assets/explosion7.svg);
+    }
+    80% {
+        background-image: url(assets/explosion8.svg);
+    }
+    90% {
+        background-image: url(assets/explosion9.svg);
+    }
+    100% {
+        background-image: url(assets/explosion9.svg);
+    }
+}
+
+@keyframes shoot {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 65%;
+    }
+}
